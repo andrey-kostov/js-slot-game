@@ -1,0 +1,77 @@
+:root{
+    --color1: #000;
+    --color2: #2196F3;
+    --color3: rgb(42, 165, 149);
+
+}
+
+body *{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.content-wrapper{
+    height: 100vh;
+}
+
+#newGameWrapper{
+    display: none;
+    width: 80%;
+}
+
+.slotRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.slotElement{
+    width: calc((100% / 6) - 20px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1.2;
+    max-width: 120px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 1px 1px 6px 1px var(--color1);
+    border-radius: 5px;
+}
+
+.slotElement span{
+    font-size: 55px;
+    color: var(--color1);
+}
+
+.winners{
+    animation: pulse 1s infinite;
+    box-shadow: 1px 1px 6px 1px var(--color2);
+}
+
+.winners span{
+    color: var(--color2);
+}
+
+#slotsWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes pulse {
+	0% {
+		transform: scale(1.05);
+	}
+
+	70% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.05);
+	}
+}
